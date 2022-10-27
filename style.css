@@ -1,5 +1,10 @@
+@font-face {
+    font-family: lemon_milk;
+    src: url(fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: lemon_milk, Arial, Helvetica, sans-serif;
     margin: 0px;
 }
 
@@ -42,11 +47,11 @@ ul {
 }
 
 #header button {
-    background-color: #4D39AD;
+    background-color: #695FB2;
     color: white;
-    font-weight: bold;
     font-size: 20px;
-    border-radius: 5px;
+    font-family: lemon_milk;
+    border-radius: 10px;
     padding: 5px 10px;
     margin-right: 32px;
 }
