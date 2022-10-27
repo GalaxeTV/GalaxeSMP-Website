@@ -1,61 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: lemon_milk;
     src: url(fonts/lemon_milk/LEMONMILK-Regular.otf);
 }
 
-body {
-    font-family: lemon_milk, Arial, Helvetica, sans-serif;
-    margin: 0px;
-}
-
-#content {
-    display: flex;
-    flex-direction: column;
-}
-
-#header {
-    display: flex;
-    flex-direction: row;
+/* Header, nav */
+header {
     background-color: #996ECB;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#header-logo {
-    justify-self: left;
     color: white;
-    margin-left: 32px;
-    font-size: 20px;
+    font-family: lemon_milk;
 }
 
-ul {
+header li {
     list-style: none;
 }
 
-#header-links ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    padding-left: 0px;
+header a {
+    text-decoration: none;
 }
 
-#header a {
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px; 
+}
+
+.nav-branding {
+    font-size: 2rem;
+    color: white;
+}
+
+.nav-item li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    padding: 1rem;
+    display: block;
 }
 
-#header button {
-    background-color: #695FB2;
+.nav-link {
     color: white;
-    font-size: 20px;
-    font-family: lemon_milk;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin-right: 32px;
+    padding: 15px;
 }
 
-button:hover {
+.nav-link:hover {
+    background-color: #8861b6;
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
     cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 1000px) { /* When screen width is less than 1000px, run code */
+    /* Menu bars transition/animation */
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Moves the nav menu into view */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #996ECB;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
 }
