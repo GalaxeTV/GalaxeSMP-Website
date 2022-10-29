@@ -9,9 +9,14 @@
     src: url(fonts/lemon_milk/LEMONMILK-Regular.otf);
 }
 
+@font-face {
+    font-family: lemon_milk_light;
+    src: url(fonts/lemon_milk/LEMONMILK-Light.otf);
+}
+
 /* Header, nav */
 header {
-    background-color: #996ECB;
+    background-color: #7B2CBF;
     color: white;
     font-family: lemon_milk;
 }
@@ -36,7 +41,8 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px; 
+    gap: 60px;
+    z-index: 3;
 }
 
 .nav-branding {
@@ -57,7 +63,7 @@ header a {
 }
 
 .nav-link:hover {
-    background-color: #8861b6;
+    background-color: #5A189A;
     width: 100%;
 }
 
@@ -101,7 +107,7 @@ header a {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #996ECB;
+        background-color: #7B2CBF;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -114,4 +120,66 @@ header a {
     .nav-menu.active {
         left: 0;
     }
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: lemon_milk;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.hero-header .hero-title {
+    font-size: 8vw;
+    /* Black outline */
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.hero-header .hero-subtitle {
+    font-size: 4vw;
+    font-family: lemon_milk_light;
+    /* Black outline */
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.hero-header .btn-discord {
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: #5A189A;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* .hero-header .btn-discord a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-header .btn-discord:hover {
+    cursor: pointer;
+} */
+
+.tree-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.75;
 }
