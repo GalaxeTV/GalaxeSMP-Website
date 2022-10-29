@@ -63,7 +63,7 @@ header a {
 }
 
 .nav-link:hover {
-    background-color: #7B2CBF;
+    background-color: #5A189A;
     width: 100%;
 }
 
@@ -169,15 +169,16 @@ header a {
     margin-top: 10px;
 }
 
-.hero-header .btn-discord a {
+/* .hero-header .btn-discord a {
     text-decoration: none;
     color: white;
 }
+
 .hero-header .btn-discord:hover {
     cursor: pointer;
-}
+} */
 
-.tree-day {
+.tree-image {
     width: 100%;
     height: auto;
     opacity: 0.75;
