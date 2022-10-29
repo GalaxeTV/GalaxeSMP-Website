@@ -16,7 +16,7 @@
 
 /* Header, nav */
 header {
-    background-color: #9D4EDD;
+    background-color: #7B2CBF;
     color: white;
     font-family: lemon_milk;
 }
@@ -63,7 +63,7 @@ header a {
 }
 
 .nav-link:hover {
-    background-color: #8861b6;
+    background-color: #7B2CBF;
     width: 100%;
 }
 
@@ -107,7 +107,7 @@ header a {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #9D4EDD;
+        background-color: #7B2CBF;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -164,7 +164,7 @@ header a {
     height: 35px;
     padding: 5px;
     font-size: 15px;
-    background-color: #695FB2;
+    background-color: #5A189A;
     border-radius: 10px;
     margin-top: 10px;
 }
